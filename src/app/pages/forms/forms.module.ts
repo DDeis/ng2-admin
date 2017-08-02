@@ -1,11 +1,8 @@
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
-import { FormsModule as AngularFormsModule } from '@angular/forms';
-import { AppTranslationModule } from '../../app.translation.module';
-import { NgaModule } from '../../theme/nga.module';
-import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgModule } from '@angular/core';
 
-import { routing }       from './forms.routing';
+import { SharedModule } from 'app/shared/shared.module';
+
+import { routing } from './forms.routing';
 
 import { Forms } from './forms.component';
 import { Inputs } from './components/inputs';
@@ -26,12 +23,9 @@ import { WithoutLabelsForm } from './components/layouts/components/withoutLabels
 
 @NgModule({
   imports: [
-    CommonModule,
-    AngularFormsModule,
-    AppTranslationModule,
-    NgaModule,
-    NgbRatingModule,
-    routing
+    SharedModule,
+
+    routing,
   ],
   declarations: [
     Layouts,
@@ -47,8 +41,8 @@ import { WithoutLabelsForm } from './components/layouts/components/withoutLabels
     BlockForm,
     HorizontalForm,
     BasicForm,
-    WithoutLabelsForm
-  ]
+    WithoutLabelsForm,
+  ],
 })
 export class FormsModule {
 }

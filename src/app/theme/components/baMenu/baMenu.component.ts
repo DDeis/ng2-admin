@@ -1,9 +1,11 @@
 import { Component, Input, OnDestroy, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+
 import { Subscription } from 'rxjs/Rx';
 
+import { GlobalState } from 'app/core/global.state';
+
 import { BaMenuService } from '../../services';
-import { GlobalState } from 'app/global.state';
 
 @Component({
   selector: 'ba-menu',

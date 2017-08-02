@@ -1,26 +1,26 @@
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { CKEditorModule } from 'ng2-ckeditor';
-import { NgaModule } from '../../theme/nga.module';
+import { NgModule } from '@angular/core';
 
-import { routing }       from './editors.routing';
+import { SharedModule } from 'app/shared/shared.module';
+
+import { CKEditorModule } from 'ng2-ckeditor';
+
+import { routing } from './editors.routing';
 import { Editors } from './editors.component';
 import { Ckeditor } from './components/ckeditor/ckeditor.component';
 
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    NgaModule,
+    SharedModule,
+
     CKEditorModule,
-    routing
+
+    routing,
   ],
   declarations: [
     Editors,
-    Ckeditor
-  ]
+    Ckeditor,
+  ],
 })
 export class EditorsModule {
 }

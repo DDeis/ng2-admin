@@ -1,9 +1,9 @@
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { NgaModule } from '../../theme/nga.module';
+import { NgModule } from '@angular/core';
 
-import { routing }       from './maps.routing';
+import { SharedModule } from 'app/shared/shared.module';
+
+import { routing } from './maps.routing';
+
 import { Maps } from './maps.component';
 import { BubbleMaps } from './components/bubbleMaps/bubbleMaps.component';
 import { GoogleMaps } from './components/googleMaps/googleMaps.component';
@@ -15,21 +15,20 @@ import { LineMapsService } from './components/lineMaps/lineMaps.service';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    NgaModule,
-    routing
+    SharedModule,
+
+    routing,
   ],
   declarations: [
     Maps,
     BubbleMaps,
     GoogleMaps,
     LeafletMaps,
-    LineMaps
+    LineMaps,
   ],
   providers: [
     BubbleMapsService,
-    LineMapsService
-  ]
+    LineMapsService,
+  ],
 })
 export class MapsModule {}

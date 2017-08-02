@@ -1,11 +1,12 @@
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { NgaModule } from '../../theme/nga.module';
+import { NgModule } from '@angular/core';
+
+import { SharedModule } from 'app/shared/shared.module';
+
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { NgbDropdownModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { routing }       from './ui.routing';
+import { routing } from './ui.routing';
+
 import { Ui } from './ui.component';
 import { Buttons } from './components/buttons/buttons.component';
 import { Grid } from './components/grid/grid.component';
@@ -28,13 +29,12 @@ import { DefaultModal } from './components/modals/default-modal/default-modal.co
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    NgaModule,
+    SharedModule,
+
     NgbDropdownModule,
     NgbModalModule,
     SlimLoadingBarModule.forRoot(),
-    routing
+    routing,
   ],
   declarations: [
     Buttons,
@@ -52,14 +52,14 @@ import { DefaultModal } from './components/modals/default-modal/default-modal.co
     LargeButtons,
     DropdownButtons,
     GroupButtons,
-    DefaultModal
+    DefaultModal,
   ],
   entryComponents: [
-    DefaultModal
+    DefaultModal,
   ],
   providers: [
-    IconsService
-  ]
+    IconsService,
+  ],
 })
 export class UiModule {
 }

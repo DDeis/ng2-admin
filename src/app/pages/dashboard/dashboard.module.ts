@@ -1,11 +1,9 @@
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { AppTranslationModule } from '../../app.translation.module';
-import { NgaModule } from '../../theme/nga.module';
+import { NgModule } from '@angular/core';
 
+import { SharedModule } from 'app/shared/shared.module';
+
+import { routing } from './dashboard.routing';
 import { Dashboard } from './dashboard.component';
-import { routing }       from './dashboard.routing';
 
 import { PopularApp } from './popularApp';
 import { PieChart } from './pieChart';
@@ -25,11 +23,8 @@ import { UsersMapService } from './usersMap/usersMap.service';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    AppTranslationModule,
-    NgaModule,
-    routing
+    SharedModule,
+    routing,
   ],
   declarations: [
     PopularApp,
@@ -40,7 +35,7 @@ import { UsersMapService } from './usersMap/usersMap.service';
     Feed,
     Todo,
     Calendar,
-    Dashboard
+    Dashboard,
   ],
   providers: [
     CalendarService,
@@ -49,7 +44,7 @@ import { UsersMapService } from './usersMap/usersMap.service';
     PieChartService,
     TodoService,
     TrafficChartService,
-    UsersMapService
-  ]
+    UsersMapService,
+  ],
 })
 export class DashboardModule {}

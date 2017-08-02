@@ -1,22 +1,19 @@
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgaModule } from '../../theme/nga.module';
+import { NgModule } from '@angular/core';
+
+import { SharedModule } from 'app/shared/shared.module';
+
+import { routing } from './register.routing';
 
 import { Register } from './register.component';
-import { routing }       from './register.routing';
-
 
 @NgModule({
   imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FormsModule,
-    NgaModule,
-    routing
+    SharedModule,
+
+    routing,
   ],
   declarations: [
-    Register
-  ]
+    Register,
+  ],
 })
-export class RegisterModule {}
+export class RegisterModule { }
