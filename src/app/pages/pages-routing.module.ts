@@ -1,11 +1,13 @@
-import { Routes, RouterModule }  from '@angular/router';
-import { Pages } from './pages.component';
-import { ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import { PagesComponent } from './pages.component';
+
 // noinspection TypeScriptValidateTypes
 
 // export function loadChildren(path) { return System.import(path); };
 
-export const routes: Routes = [
+const routes: Routes = [
   {
     path: 'login',
     loadChildren: 'app/pages/login/login.module#LoginModule'
@@ -16,7 +18,7 @@ export const routes: Routes = [
   },
   {
     path: 'pages',
-    component: Pages,
+    component: PagesComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
@@ -31,4 +33,8 @@ export const routes: Routes = [
   }
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forChild(routes);
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class PagesRoutingModule { }
