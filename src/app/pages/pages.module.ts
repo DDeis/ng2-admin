@@ -5,14 +5,14 @@ import { SharedModule } from 'app/shared/shared.module';
 
 import { routing } from './pages.routing';
 
-import { Pages } from './pages.component';
+import { PagesComponent } from './pages.component';
 
 @NgModule({
   imports: [
     SharedModule,
     routing,
   ],
-  declarations: [Pages],
+  declarations: [PagesComponent],
 })
 export class PagesModule {
 }

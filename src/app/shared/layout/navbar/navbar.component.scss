@@ -1,17 +1,17 @@
-@import '../../sass/conf/conf';
-@import '../../components/baMsgCenter/baMsgCenter';
+@import '~app/theme/sass/conf/conf';
+@import '~app/theme/components/baMsgCenter/baMsgCenter';
 
 :host /deep/ {
 
   .page-top {
     background-color: $sidebar;
-    position: fixed;
-    z-index: 904;
-    box-shadow: 2px 0 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 0 3px rgba(0, 0, 0, .5);
     height: 66px;
-    width: 100%;
     min-width: $resMin;
     padding: 0 32px 0 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 904;
 
     .dropdown-toggle::after {
       display: none;
@@ -27,12 +27,12 @@
   a.al-logo {
     color: $sidebar-text;
     display: block;
-    font-size: 24px;
-    font-family: $font-family;
-    white-space: nowrap;
     float: left;
-    outline: none !important;
+    font-family: $font-family;
+    font-size: 24px;
     line-height: 60px;
+    outline: none !important;
+    white-space: nowrap;
 
     span {
       color: $primary;
@@ -45,52 +45,55 @@
 
   .user-profile {
     float: right;
-    min-width: 230px;
     margin-top: 10px;
+    min-width: 230px;
   }
 
   .al-user-profile {
-    float: right;
-    margin-right: 12px;
-    transition: all .15s ease-in-out;
-    padding: 0;
-    width: 36px;
-    height: 36px;
     border: 0;
+    float: right;
+    height: 36px;
+    margin-right: 12px;
     opacity: 1;
+    padding: 0;
     position: relative;
+    transition: all .15s ease-in-out;
+    width: 36px;
+
     ul.profile-dropdown:after {
-      bottom: 100%;
-      right: 0;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      border-color: rgba(255, 255, 255, 0);
       border-bottom-color: #fff;
+      border-color: rgba(255, 255, 255, 0);
       border-width: 10px;
+      border: solid transparent;
+      bottom: 100%;
+      content: ' ';
+      height: 0;
       margin-right: 28px;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      width: 0;
     }
+
     a {
       display: block;
     }
+
     img {
-      width: 45px;
-      height: 45px;
       border-radius: 50%;
+      height: 45px;
+      width: 45px;
     }
   }
 
   a.refresh-data {
     color: $sidebar-text;
-    font-size: 13px;
-    text-decoration: none;
-    font-weight: $font-normal;
     float: right;
-    margin-top: 13px;
+    font-size: 13px;
+    font-weight: $font-normal;
     margin-right: 26px;
+    margin-top: 13px;
+    text-decoration: none;
 
     &:hover {
       color: $warning !important;
@@ -98,15 +101,15 @@
   }
 
   a.collapse-menu-link {
-    font-size: 31px;
+    color: $sidebar-text;
     cursor: pointer;
     display: block;
-    text-decoration: none;
-    line-height: 42px;
-    color: $sidebar-text;
-    padding: 0;
     float: left;
+    font-size: 31px;
+    line-height: 42px;
     margin: 11px 0 0 25px;
+    padding: 0;
+    text-decoration: none;
 
     &:hover {
       text-decoration: none;
