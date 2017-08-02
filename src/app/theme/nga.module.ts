@@ -2,14 +2,17 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
 import { NgUploaderModule } from 'ngx-uploader';
 
 import { AppTranslationModule } from 'app/shared/app-translation.module';
 
-import { BaThemeConfig } from './theme.config';
+import {
+  BaThemeConfig,
+} from './theme.config';
 
-import { BaThemeConfigProvider } from './theme.configProvider';
+import {
+  BaThemeConfigProvider,
+} from './theme.configProvider';
 
 import {
   BaAmChart,
@@ -17,9 +20,13 @@ import {
   BaCard,
   BaChartistChart,
   BaCheckbox,
+  BaContentTop,
   BaFullCalendar,
+  BaMenuItem,
+  BaMenu,
   BaMultiCheckbox,
   BaPictureUploader,
+  BaSidebar,
   BaFileUploader,
 } from './components';
 
@@ -55,9 +62,13 @@ const NGA_COMPONENTS = [
   BaCard,
   BaChartistChart,
   BaCheckbox,
+  BaContentTop,
   BaFullCalendar,
+  BaMenuItem,
+  BaMenu,
   BaMultiCheckbox,
   BaPictureUploader,
+  BaSidebar,
   BaFileUploader,
 ];
 
@@ -87,6 +98,11 @@ const NGA_VALIDATORS = [
 ];
 
 @NgModule({
+  declarations: [
+    ...NGA_PIPES,
+    ...NGA_DIRECTIVES,
+    ...NGA_COMPONENTS,
+  ],
   imports: [
     CommonModule,
     RouterModule,
@@ -97,11 +113,6 @@ const NGA_VALIDATORS = [
 
     AppTranslationModule,
   ],
-  declarations: [
-    ...NGA_PIPES,
-    ...NGA_DIRECTIVES,
-    ...NGA_COMPONENTS,
-  ],
   exports: [
     ...NGA_PIPES,
     ...NGA_DIRECTIVES,
@@ -109,9 +120,7 @@ const NGA_VALIDATORS = [
   ],
 })
 export class NgaModule {
-
   static forRoot(): ModuleWithProviders {
-
     return <ModuleWithProviders> {
       ngModule: NgaModule,
       providers: [
@@ -122,5 +131,4 @@ export class NgaModule {
       ],
     };
   }
-
 }
