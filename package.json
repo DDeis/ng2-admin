@@ -95,8 +95,8 @@
     "@types/jquery.slimscroll": "1.3.30",
     "@types/lodash": "^4.14.71",
     "@types/node": "~8.0.19",
-    "codelyzer": "~3.0.1",
-    "gh-pages": "0.12.0",
+    "codelyzer": "^3.1.2",
+    "gh-pages": "^1.0.0",
     "jasmine-core": "~2.7.0",
     "jasmine-spec-reporter": "~4.1.1",
     "karma": "^1.7.0",
@@ -108,16 +108,16 @@
     "npm-run-all": "4.0.2",
     "protractor": "~5.1.2",
     "rimraf": "2.6.1",
-    "standard-changelog": "1.0.1",
-    "stylelint": "7.10.1",
+    "standard-changelog": "^1.0.2",
+    "stylelint": "^8.0.0",
     "ts-node": "~3.3.0",
     "tslint": "^5.5.0",
     "tslint-eslint-rules": "^4.1.1",
     "tslint-language-service": "0.9.6",
     "typescript": "~2.4.2",
-    "typogr": "0.6.6",
+    "typogr": "^0.6.7",
     "underscore": "1.8.3",
-    "wintersmith": "2.2.5",
-    "wintersmith-sassy": "1.1.0"
+    "wintersmith": "^2.4.1",
+    "wintersmith-sassy": "^1.2.0"
   }
 }
