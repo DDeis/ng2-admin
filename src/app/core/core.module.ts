@@ -26,7 +26,6 @@ export type StoreType = {
   providers: [ // expose our Services and Providers into Angular's dependency injection
     APP_PROVIDERS,
   ],
-  exports: [],
 })
 export class CoreModule {
 

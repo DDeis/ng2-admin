@@ -8,7 +8,6 @@ import { NgaModule } from 'app/theme/nga.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppTranslationModule } from './app-translation.module';
-import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   imports: [
@@ -27,7 +26,6 @@ import { LayoutModule } from './layout/layout.module';
     NgbModule,
 
     AppTranslationModule,
-    LayoutModule,
   ],
 })
 export class SharedModule { }
