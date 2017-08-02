@@ -14,9 +14,13 @@ $input-border: rgba(255, 255, 255, 0.6); // input border color
 $input-background: rgba(255, 255, 255, 0.1); // input border color for hover
 $dropdown-text: #7d7d7d; // dropdown text color
 
+// navbar colors
+$navbar-background-color: #282828;
+$navbar-color: #ffffff;
+
 // sidebar colors
-$sidebar: #282828;
-$sidebar-text: #ffffff;
+$sidebar-background-color: $navbar-background-color;
+$sidebar-color: $navbar-color;
 
 // specific components colors
 $mail-box: whitesmoke;

@@ -61,13 +61,13 @@ a {
 
 .al-main {
   margin-left: $left-space;
-  padding: 66px 0 34px 0;
+  padding: $top-height 0 $footer-height 0;
   min-height: 500px;
   position: relative;
 }
 
 .al-footer {
-  height: 34px;
+  height: $footer-height;
   padding: 0 18px 0 ($left-space + 20px);
   width: 100%;
   position: absolute;
