@@ -1,4 +1,4 @@
-<div class="picture-group" [ngClass]="{uploading: uploadInProgress}">
+<div class="picture-group" [ngClass]="{ uploading: uploadInProgress }">
   <div class="picture-wrapper" (click)="bringFileSelector();">
     <img [src]="picture" *ngIf="picture">
     <img [src]="defaultPicture" *ngIf="!!!picture && !!defaultPicture">

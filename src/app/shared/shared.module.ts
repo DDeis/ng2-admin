@@ -4,10 +4,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { TranslateService } from '@ngx-translate/core';
-
 import { NgaModule } from 'app/theme/nga.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { AppTranslationModule } from './app-translation.module';
 
 @NgModule({
   imports: [
@@ -18,11 +18,14 @@ import { NgaModule } from 'app/theme/nga.module';
   exports: [
     CommonModule,
     HttpClientModule,
-    RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
+
     NgaModule,
     NgbModule,
+
+    AppTranslationModule,
   ],
 })
 export class SharedModule { }

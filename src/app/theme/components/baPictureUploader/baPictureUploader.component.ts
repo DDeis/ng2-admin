@@ -11,7 +11,7 @@ export class BaPictureUploader {
   @Input() defaultPicture:string = '';
   @Input() picture:string = '';
 
-  @Input() uploaderOptions:NgUploaderOptions = { url: '' };
+  @Input() uploaderOptions: NgUploaderOptions = { url: '' };
   @Input() canDelete:boolean = true;
 
   @Output() onUpload = new EventEmitter<any>();
