@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs/Rx';
 
 import { GlobalState } from 'app/core/global.state';
 
-import { BaMenuService } from '../../services';
+import { BaMenuService } from 'app/theme/services';
 
 @Component({
   selector: 'ba-menu',

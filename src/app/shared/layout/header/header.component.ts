@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { GlobalState } from 'app/core/global.state';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  activePageTitle: string = '';
+
+  constructor(private state: GlobalState) { }
 
   ngOnInit() {
+    this.state.subscribe('menu.activeLink', (activeLink) => {
+      if (activeLink) {
+        this.activePageTitle = activeLink.title;
+      }
+    });
   }
 
 }
